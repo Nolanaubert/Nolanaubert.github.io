@@ -3,225 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aubert Nolan — CV · BTS SIO SISR</title>
+    <title>Aubert Nolan — Accueil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/variables.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/animations.css" />
   </head>
-
   <body>
-    <div class="cv-root">
 
-      <!-- ════════════════════════════ HEADER ════════════════════════════ -->
-      <header class="header">
-        <div class="header-left">
+    <!-- ══════════════════════════ NAVBAR ══════════════════════════ -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <span class="navbar-logo">AN</span>
+        <span class="navbar-name">Aubert <strong>Nolan</strong></span>
+      </div>
+      <button class="navbar-burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html"                 class="nav-link active">Accueil</a></li>
+        <li><a href="pages/projets.html"          class="nav-link">Projets</a></li>
+        <li><a href="pages/entreprise.html"       class="nav-link">Entreprise</a></li>
+        <li><a href="pages/certifications.html"   class="nav-link">Certifications</a></li>
+        <li><a href="pages/cv.html"               class="nav-link">CV</a></li>
+        <li><a href="pages/veille.html"           class="nav-link">Veille techno</a></li>
+      </ul>
+    </nav>
+
+    <!-- ══════════════════════════ PAGE ══════════════════════════ -->
+    <div class="page-wrapper">
+
+      <header class="hero">
+        <div class="hero-left">
+          <div class="hero-tag">BTS SIO · SISR</div>
           <h1 class="name">AUBERT <span class="name--accent">NOLAN</span></h1>
-          <div class="title-tag">BTS SIO · SISR</div>
           <p class="tagline">
             Étudiant passionné par les réseaux et l'infrastructure système,
             actuellement en alternance.
           </p>
-        </div>
 
-        <div class="header-right">
+        <div class="hero-right">
+          <div class="contact-item"><span>nolan.aubert@email.com</span><div class="dot"></div></div>
+          <div class="contact-item"><span>+33 6 XX XX XX XX</span><div class="dot"></div></div>
+          <div class="contact-item"><span>Grand Est, France</span><div class="dot"></div></div>
           <div class="contact-item">
-            <span>nolanaubert54@gmail.com</span>
-            <div class="dot"></div>
-          </div>
-          <div class="contact-item">
-            <span>+33 6 21 95 18 49 </span>
-            <div class="dot"></div>
-          </div>
-          <div class="contact-item">
-            <span>Nancy, Grand Est, France</span>
-            <div class="dot"></div>
-          </div>
-          <div class="contact-item">
-            <a href="https://linkedin.com" target="_blank" rel="noopener">
-              linkedin.com/X
-            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin.com/in/nolan-aubert</a>
             <div class="dot"></div>
           </div>
         </div>
       </header>
 
-      <!-- ════════════════════════════ MAIN GRID ════════════════════════════ -->
-      <main class="grid-2">
-
-        <!-- ──── COLONNE GAUCHE ──── -->
-        <div class="col-left">
-
-          <!-- Compétences -->
-          <section class="section" id="skills">
-            <h2 class="section-title">Compétences réseau</h2>
-            <div class="skill-grid">
-              <span class="skill-tag">Cisco / Packet Tracer</span>
-              <span class="skill-tag">VLAN / Routage</span>
-              <span class="skill-tag">TCP/IP</span>
-              <span class="skill-tag">DNS / DHCP</span>
-              <span class="skill-tag">pfSense</span>
-              <span class="skill-tag">Active Directory</span>
-              <span class="skill-tag">Linux Ubuntu</span>
-              <span class="skill-tag">Linux Debian</span>
-            </div>
-          </section>
-
-          <!-- Niveaux -->
-          <section class="section" id="levels">
-            <h2 class="section-title">Niveau technique</h2>
-
-            <div class="bar-wrap">
-              <div class="bar-label">
-                <span>Cisco / Réseau</span><span>75%</span>
-              </div>
-              <div class="bar-track">
-                <div class="bar-fill" data-width="75"></div>
-              </div>
-            </div>
-
-            <div class="bar-wrap">
-              <div class="bar-label">
-                <span>Linux</span><span>65%</span>
-              </div>
-              <div class="bar-track">
-                <div class="bar-fill" data-width="65"></div>
-              </div>
-            </div>
-
-            <div class="bar-wrap">
-              <div class="bar-label">
-                <span>Active Directory</span><span>60%</span>
-              </div>
-              <div class="bar-track">
-                <div class="bar-fill" data-width="60"></div>
-              </div>
-            </div>
-
-            <div class="bar-wrap">
-              <div class="bar-label">
-                <span>pfSense / Sécurité</span><span>55%</span>
-              </div>
-              <div class="bar-track">
-                <div class="bar-fill" data-width="55"></div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Langues -->
-          <section class="section" id="languages">
-            <h2 class="section-title">Langues</h2>
-            <div class="skill-grid">
-              <span class="skill-tag skill-tag--accent">Français — natif</span>
-              <span class="skill-tag">Anglais — B1</span>
-            </div>
-          </section>
-
+      <section class="section" id="skills">
+        <h2 class="section-title">Compétences réseau</h2>
+        <div class="skill-grid">
+          <span class="skill-tag">Cisco / Packet Tracer</span>
+          <span class="skill-tag">VLAN / Routage</span>
+          <span class="skill-tag">TCP/IP</span>
+          <span class="skill-tag">DNS / DHCP</span>
+          <span class="skill-tag">pfSense</span>
+          <span class="skill-tag">Active Directory</span>
+          <span class="skill-tag">Linux Ubuntu</span>
+          <span class="skill-tag">Linux Debian</span>
         </div>
+      </section>
 
-        <!-- ──── COLONNE DROITE ──── -->
-        <div class="col-right">
-
-          <!-- Formation -->
-          <section class="section" id="education">
-            <h2 class="section-title">Formation</h2>
-
-            <article class="card">
-              <div class="card-head">
-                <div>
-                  <div class="card-title">BTS SIO — option SISR</div>
-                  <div class="card-sub">Lycée Jean Prouvé · Option C SSIHT</div>
-                </div>
-                <div class="badge badge--green">2024 – 2026</div>
-              </div>
-              <p class="card-desc">
-                Systèmes, réseaux, sécurité informatique. Formation en alternance.
-              </p>
-            </article>
-
-            <article class="card card--alt">
-              <div class="card-head">
-                <div>
-                  <div class="card-title">Baccalauréat SN OPTION C</div>
-                  <div class="card-sub">Lycée Jean Prouvé</div>
-                </div>
-                <div class="badge">2024</div>
-              </div>
-            </article>
-          </section>
-
-          <!-- Expérience -->
-          <section class="section" id="experience">
-            <h2 class="section-title">Expérience</h2>
-
-            <article class="card">
-              <div class="card-head">
-                <div>
-                  <div class="card-title">Alternant Technico-Commercial </div>
-                  <div class="card-sub">UNIDOC </div>
-                </div>
-                <div class="badge badge--green">En cours</div>
-              </div>
-              <p class="card-desc">
-                Administration réseau, support utilisateurs, maintien en condition
-                opérationnelle du parc informatique, Pose de  système de sécurité normée NFA2P
-              </p>
-            </article>
-          </section>
-
-          <!-- Projets -->
-          <section class="section" id="projects">
-            <h2 class="section-title">Projets</h2>
-
-            <article class="card card--alt">
-              <div class="card-head">
-                <div>
-                  <div class="card-title">Réseau d'entreprise simulé</div>
-                  <div class="card-sub">Packet Tracer · TP BTS</div>
-                </div>
-              </div>
-              <p class="card-desc">
-                Configuration de VLANs, routage inter-VLAN, mise en place de
-                règles pare-feu et services DHCP/DNS.
-              </p>
-            </article>
-
-            <article class="card">
-              <div class="card-head">
-                <div>
-                  <div class="card-title">Déploiement Active Directory</div>
-                  <div class="card-sub">Windows Server · TP BTS</div>
-                </div>
-              </div>
-              <p class="card-desc">
-                Création d'un domaine, gestion des utilisateurs, stratégies de
-                groupe (GPO).
-              </p>
-            </article>
-          </section>
-
+      <section class="section" id="levels">
+        <h2 class="section-title">Niveau technique</h2>
+        <div class="bars-grid">
+          <div class="bar-wrap">
+            <div class="bar-label"><span>Cisco / Réseau</span><span>75%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+          </div>
+          <div class="bar-wrap">
+            <div class="bar-label"><span>Linux</span><span>65%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
+          </div>
+          <div class="bar-wrap">
+            <div class="bar-label"><span>Active Directory</span><span>60%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="60"></div></div>
+          </div>
+          <div class="bar-wrap">
+            <div class="bar-label"><span>pfSense / Sécurité</span><span>55%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="55"></div></div>
+          </div>
         </div>
-      </main>
+      </section>
 
-      <!-- ════════════════════════════ FOOTER ════════════════════════════ -->
-      <footer class="footer-line">
-        <span>
-          <span class="status-dot"></span>
-          Disponible — alternance en cours
-        </span>
-        <span>CV · Aubert Nolan · BTS SIO SISR · 2026</span>
-      </footer>
-
-    </div><!-- /.cv-root -->
+    <footer class="site-footer">
+      <span><span class="status-dot"></span>Disponible — alternance en cours</span>
+      <span>Aubert Nolan · BTS SIO SISR · 2026</span>
+    </footer>
 
     <script src="assets/js/bars.js"></script>
+    <script src="assets/js/navbar.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
