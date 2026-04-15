@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travaux Pratiques</title>
+
+  <!-- Fonts (mêmes que ton site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Ton design system -->
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/navbar
+  .css" />
+
+  <!-- Styles spécifiques à la page TP -->
+  <link rel="stylesheet" href="../assets/css/tp.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <span class="navbar-logo">AN</span>
+      <span class="navbar-name">Aubert <strong>Nolan</strong></span>
+    </div>
+    <button class="navbar-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar-links" id="navLinks">
+      <li><a href="../index.html"               class="nav-link">Accueil</a></li>
+      <li><a href="projets.html"                class="nav-link active">Projets</a></li>
+      <li><a href="entreprise.html"             class="nav-link">Entreprise</a></li>
+      <li><a href="certifications.html"         class="nav-link">Certifications</a></li>
+      <li><a href="cv.html"                     class="nav-link">CV</a></li>
+      <li><a href="veille.html"                 class="nav-link">Veille techno</a></li>
+    </ul>
+  </nav>
+
+  <!-- ╔══════════════════════════════════════╗
+       ║  LAYOUT PRINCIPAL                    ║
+       ╚══════════════════════════════════════╝ -->
+  <div class="tp-layout">
+
+    <!-- ── Sidebar gauche : matières & TP ── -->
+    <aside class="tp-sidebar" id="tp-sidebar">
+      <div class="tp-sidebar-inner">
+
+        <div class="tp-sidebar-group">
+          <div class="tp-sidebar-heading">
+            <span class="dot"></span> Réseau
+          </div>
+          <ul class="tp-sidebar-list">
+            <li><a href="#" class="tp-sidebar-link" data-tp="reseau-1">TP 1 — Modèle OSI</a></li>
+            <li><a href="#" class="tp-sidebar-link active" data-tp="reseau-2">TP 2 — VLAN & switches</a></li>
+            <li><a href="#" class="tp-sidebar-link" data-tp="reseau-3">TP 3 — Routage OSPF</a></li>
+          </ul>
+        </div>
+
+        <div class="tp-sidebar-group">
+          <div class="tp-sidebar-heading">
+            <span class="dot" style="background:var(--accent-2)"></span> Linux
+          </div>
+          <ul class="tp-sidebar-list">
+            <li><a href="#" class="tp-sidebar-link" data-tp="linux-1">TP 1 — Commandes de base</a></li>
+            <li><a href="#" class="tp-sidebar-link" data-tp="linux-2">TP 2 — Gestion des droits</a></li>
+            <li><a href="#" class="tp-sidebar-link" data-tp="linux-3">TP 3 — Services systemd</a></li>
+          </ul>
+        </div>
+
+        <div class="tp-sidebar-group">
+          <div class="tp-sidebar-heading">
+            <span class="dot" style="background:#ff6b35"></span> Windows Server
+          </div>
+          <ul class="tp-sidebar-list">
+            <li><a href="#" class="tp-sidebar-link" data-tp="win-1">TP 1 — Active Directory</a></li>
+            <li><a href="#" class="tp-sidebar-link" data-tp="win-2">TP 2 — DNS & DHCP</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- ── Contenu principal du TP ── -->
+    <main class="tp-main" id="tp-main">
+
+      <!-- Fil d'ariane -->
+      <div class="tp-breadcrumb">
+        <span>Travaux Pratiques</span>
+        <span class="tp-bc-sep">›</span>
+        <span id="bc-subject">Réseau</span>
+        <span class="tp-bc-sep">›</span>
+        <span id="bc-title">TP 2 — VLAN & switches</span>
+      </div>
+
+      <!-- En-tête du TP -->
+      <div class="tp-header">
+        <div class="tp-header-left">
+          <span class="badge badge--green tp-subject-badge" id="tp-badge">Réseau</span>
+          <h1 class="tp-title" id="tp-title">TP 2 — VLAN & configuration des switches</h1>
+          <div class="tp-meta" id="tp-meta">
+            <span>⏱ Durée : 2h</span>
+            <span class="tp-meta-sep">·</span>
+            <span>Niveau : Intermédiaire</span>
+            <span class="tp-meta-sep">·</span>
+            <span>Outil : Cisco Packet Tracer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sommaire cliquable -->
+      <nav class="tp-toc" id="tp-toc">
+        <div class="tp-toc-title">
+          <span class="section-title" style="margin-bottom:0">Sommaire</span>
+        </div>
+        <ol class="tp-toc-list" id="toc-list">
+          <!-- généré par JS -->
+        </ol>
+      </nav>
+
+      <!-- ── Sections du TP ── -->
+      <!-- Pour ajouter une section : copie un bloc <section class="tp-section"> -->
+
+      <section class="tp-section" id="section-1" data-title="Introduction et rappels théoriques">
+        <h2 class="tp-section-title">
+          <span class="tp-section-num">01</span>
+          Introduction et rappels théoriques
+        </h2>
+        <p class="tp-text">
+          Un VLAN (Virtual Local Area Network) permet de segmenter logiquement un réseau physique en plusieurs réseaux
+          distincts au niveau de la couche 2 du modèle OSI. Cette isolation améliore la sécurité et réduit le domaine
+          de diffusion.
+        </p>
+        <p class="tp-text">
+          Dans ce TP, nous allons configurer deux VLANs sur un switch Cisco en environnement simulé avec Packet Tracer,
+          puis vérifier l'isolation entre les machines.
+        </p>
+
+        <!-- Encadré info -->
+        <div class="tp-note tp-note--info">
+          <span class="tp-note-icon">ℹ</span>
+          <div>
+            <strong>Prérequis :</strong> avoir terminé le TP 1 (Modèle OSI) et disposer de Cisco Packet Tracer 8+.
+          </div>
+        </div>
+      </section>
+
+      <section class="tp-section" id="section-2" data-title="Mise en place de la topologie">
+        <h2 class="tp-section-title">
+          <span class="tp-section-num">02</span>
+          Mise en place de la topologie
+        </h2>
+        <p class="tp-text">
+          Ouvrez Packet Tracer et créez la topologie suivante : un switch 2960, quatre PC (PC0 à PC3).
+          Reliez chaque PC à un port du switch avec un câble droit.
+        </p>
+
+        <!-- Bloc screenshot -->
+        <div class="tp-screenshot">
+          <div class="tp-screenshot-label">Capture — Topologie dans Packet Tracer</div>
+          <!-- Remplace le src par ton image -->
+          <img src="screenshots/tp2-topologie.png" alt="Topologie Packet Tracer" class="tp-img" onerror="this.parentElement.classList.add('tp-screenshot--placeholder')" />
+          <div class="tp-screenshot-placeholder-text">screenshot/tp2-topologie.png</div>
+        </div>
+
+        <!-- Encadré avertissement -->
+        <div class="tp-note tp-note--warn">
+          <span class="tp-note-icon">⚠</span>
+          <div>
+            Utilisez bien des <strong>câbles droits</strong> (Copper Straight-Through) entre les PC et le switch,
+            pas des câbles croisés.
+          </div>
+        </div>
+      </section>
+
+      <section class="tp-section" id="section-3" data-title="Configuration des VLANs">
+        <h2 class="tp-section-title">
+          <span class="tp-section-num">03</span>
+          Configuration des VLANs
+        </h2>
+        <p class="tp-text">
+          Accédez à la CLI du switch en cliquant dessus puis sur l'onglet <em>CLI</em>.
+          Passez en mode privilégié puis en mode de configuration globale.
+        </p>
+
+        <!-- Bloc de code -->
+        <div class="tp-code-wrap">
+          <div class="tp-code-header">
+            <span class="tp-code-lang">IOS — switch Cisco</span>
+            <button class="tp-copy-btn" data-target="code-1">Copier</button>
+          </div>
+          <pre class="tp-code" id="code-1"><code>Switch> enable
+Switch# configure terminal
+
+! Créer le VLAN 10 pour l'administration
+Switch(config)# vlan 10
+Switch(config-vlan)# name VLAN_ADMIN
+Switch(config-vlan)# exit
+
+! Créer le VLAN 20 pour les utilisateurs
+Switch(config)# vlan 20
+Switch(config-vlan)# name VLAN_USERS
+Switch(config-vlan)# exit</code></pre>
+        </div>
+
+        <p class="tp-text">
+          Assignez ensuite les ports aux VLANs. Les ports Fa0/1 et Fa0/2 iront dans le VLAN 10,
+          les ports Fa0/3 et Fa0/4 dans le VLAN 20.
+        </p>
+
+        <div class="tp-code-wrap">
+          <div class="tp-code-header">
+            <span class="tp-code-lang">IOS — assignation des ports</span>
+            <button class="tp-copy-btn" data-target="code-2">Copier</button>
+          </div>
+          <pre class="tp-code" id="code-2"><code>Switch(config)# interface range fa0/1 - 2
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 10
+Switch(config-if-range)# exit
+
+Switch(config)# interface range fa0/3 - 4
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 20
+Switch(config-if-range)# exit</code></pre>
+        </div>
+
+        <div class="tp-screenshot">
+          <div class="tp-screenshot-label">Capture — Résultat de la commande show vlan brief</div>
+          <img src="screenshots/tp2-vlan-brief.png" alt="show vlan brief" class="tp-img" onerror="this.parentElement.classList.add('tp-screenshot--placeholder')" />
+          <div class="tp-screenshot-placeholder-text">screenshots/tp2-vlan-brief.png</div>
+        </div>
+      </section>
+
+      <section class="tp-section" id="section-4" data-title="Vérification et tests de connectivité">
+        <h2 class="tp-section-title">
+          <span class="tp-section-num">04</span>
+          Vérification et tests de connectivité
+        </h2>
+        <p class="tp-text">
+          Configurez les adresses IP des PC (PC0 et PC1 en 192.168.10.x/24, PC2 et PC3 en 192.168.20.x/24)
+          puis vérifiez que les machines du même VLAN se pingent, et que les machines de VLANs différents ne
+          se pingent pas.
+        </p>
+
+        <div class="tp-code-wrap">
+          <div class="tp-code-header">
+            <span class="tp-code-lang">Vérification — depuis la CLI du switch</span>
+            <button class="tp-copy-btn" data-target="code-3">Copier</button>
+          </div>
+          <pre class="tp-code" id="code-3"><code>Switch# show vlan brief
+Switch# show interfaces status</code></pre>
+        </div>
+
+        <!-- Tableau de résultats attendus -->
+        <div class="tp-table-wrap">
+          <table class="tp-table">
+            <thead>
+              <tr>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Résultat attendu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PC0 (VLAN 10)</td>
+                <td>PC1 (VLAN 10)</td>
+                <td><span class="badge badge--green">✓ Succès</span></td>
+              </tr>
+              <tr>
+                <td>PC2 (VLAN 20)</td>
+                <td>PC3 (VLAN 20)</td>
+                <td><span class="badge badge--green">✓ Succès</span></td>
+              </tr>
+              <tr>
+                <td>PC0 (VLAN 10)</td>
+                <td>PC2 (VLAN 20)</td>
+                <td><span class="badge" style="border-color:#ff4444;color:#ff4444">✗ Échec (isolation)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tp-note tp-note--success">
+          <span class="tp-note-icon">✓</span>
+          <div>
+            Si les résultats correspondent au tableau, votre configuration est correcte.
+            Passez à la section dépannage si ce n'est pas le cas.
+          </div>
+        </div>
+      </section>
+
+      <section class="tp-section" id="section-5" data-title="Dépannage courant">
+        <h2 class="tp-section-title">
+          <span class="tp-section-num">05</span>
+          Dépannage courant
+        </h2>
+        <p class="tp-text">
+          Voici les erreurs les plus fréquentes et comment les corriger.
+        </p>
+
+        <div class="card" style="margin-bottom:var(--space-md)">
+          <div class="card-head">
+            <span class="card-title">Le ping échoue entre deux PC du même VLAN</span>
+            <span class="badge">Problème fréquent</span>
+          </div>
+          <p class="card-desc">
+            Vérifiez que les adresses IP sont dans le même sous-réseau, et que les ports sont bien
+            assignés au bon VLAN avec <code class="tp-inline-code">show vlan brief</code>.
+          </p>
+        </div>
+
+        <div class="card card--alt">
+          <div class="card-head">
+            <span class="card-title">Le VLAN n'apparaît pas dans show vlan brief</span>
+            <span class="badge">Config manquante</span>
+          </div>
+          <p class="card-desc">
+            Le VLAN doit être créé explicitement même s'il a été assigné à un port.
+            Retournez en mode <code class="tp-inline-code">config</code> et recréez-le.
+          </p>
+        </div>
+      </section>
+
+      <!-- Pied de page du TP -->
+      <div class="tp-footer">
+        <span>
+          <span class="status-dot"></span>
+          TP 2 — Réseau · BTS SIO
+        </span>
+        <span>Mis à jour : juin 2025</span>
+      </div>
+
+    </main>
+
+    <!-- ── Sommaire flottant droit (sections de la page) ── -->
+    <aside class="tp-toc-right" id="tp-toc-right">
+      <div class="tp-toc-right-title">Sur cette page</div>
+      <ul class="tp-toc-right-list" id="toc-right-list">
+
+      </ul>
+    </aside>
+
+  </div><!-- /.tp-layout -->
+
+  <script src="../assets/js/tp.js"></script>
+</body>
+</html>
